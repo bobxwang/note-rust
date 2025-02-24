@@ -6,3 +6,8 @@
    - no-modules：跟web类似，但更旧并且不能使用es模块
 - 升级
   ```rustup update stable --force```
+- 使用下划线关掉告警未使用的变量
+  ```fn main() {
+	let _x = 5;  // 虽然未使用此变量但不会警告
+	let y = 6;   // 会警告存在未使用的变量
+  }```
