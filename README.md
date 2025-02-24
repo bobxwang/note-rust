@@ -13,3 +13,13 @@
 	let y = 6;   // 会警告存在未使用的变量
   }
   ```
+- Clippy
+>是一个Rust代码的lint工具集合，帮助开发者捕获常见的错误并改进代码质量
+- rust-toolchain
+>跟Cargo.toml平级的一个文件名，常见于团队开发，确保成员使用相同的工具链版本，文件内容一般如下
+```toml
+[toolchain]
+channel = "stable" #使用稳定版工具链
+components = ["rustfmt", "clippy"] #默认安装格式化及代码检测集
+targets = ["x86_64-unknown-linux-gnu"]
+```
